@@ -87,6 +87,7 @@ class MateriSiswaController extends Controller
                 $submission = Submission::create([
                     "materi_id" => $dec_id,
                     "siswa_id" => $user->id_siswa,
+                    "start_at" => date("Y-m-d H:i:s"),
                 ]);
             }            
             $sub_id = $submission->id;
